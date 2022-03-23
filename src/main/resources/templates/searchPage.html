@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to the Library Catalogue</h1>
+                <!-- <img th:src = "@{image/Simpsons.gif}"/> -->
+                <!-- <img th:src = "@{/image/1.gif}" alt="mail-icon" width="110" height="110" border="0"/>/> -->
+                
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-arrow-through-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" 
+                    d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l3.103-3.104a.5.5 0 1 1 .708.708L4.5 12.207V14a.5.5 0 0 1-.146.354l-1.5 1.5ZM16 3.5a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182A23.825 23.825 0 0 1 5.8 12.323L8.31 9.81a1.5 1.5 0 0 0-2.122-2.122L3.657 10.22a8.827 8.827 0 0 1-1.039-1.57c-.798-1.576-.775-2.997-.213-4.093C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3Z"/>
+                </svg>
+            
+        </div>
+    </div> -->
+
+    <form
+        action="#"
+        th:action="@{/search}"
+        th:object="${book}"
+        method="GET"
+        >    
+            <h1>Search for books: </h1>
+            <p><input type="text" name="search" id="search"/></p>
+            <p>
+                <input type="submit" name="searchAuthor" value="Search By Author">
+                <input type="submit" name="searchTitle" value="Search By Title">
+                <input type="submit" name="searchId" value="Search By Id">
+            </p>
+            <br>
+            <p>
+                <input type="submit" name="getAllBooks" value="Browse All Books">
+            </p>
+
+        </form>
+    
+    <!-- <form action="#" th:action="@{/book}" 
+                th:object="${book}" method="post">
+        <p>Title of Book:<input type="text" th:field="*{title}"/></p>
+        <p>Author name:<input type="text" th:field="*{author}"/></p>
+        <p><input type="submit" value="Submit"/></p>
+    </form> -->
+
+    
+    <!-- <form action="#" th:action="@{title}" th:object="${title}" method="post">
+        <p>Title of Book:<input type="text" th:field="*{title}"/>
+        </p>
+        <p>Author name:<input type="text" th:field="*{author}"/>
+        </p>
+        <p>input type="submit" value="Submit"
+        </p>
+    </form> -->
+</body>
+</html>

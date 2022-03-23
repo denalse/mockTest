@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    <table>
+        <h1>Books found: </h1>
+        <tr data-th-each="book : ${bookList}">
+            <td data-th-text="${book.bookId}"><br></td>
+            <td data-th-text="${book.title}"><br></td>
+            <td data-th-text="${book.author}"><br></td>
+            <td><img data-th-src="${book.imageUrl}"></td>
+        </tr>
+    </table>
+</body>
+</html>
