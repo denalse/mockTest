@@ -21,14 +21,14 @@ public class BookRepo implements RedisRepo {
 
     @Override
     public Book findById (String bookId) {
-        Book resultById = (Book) redisTemplate.opsForHash().get(BOOK_ENTITY + "_Map" + bookId, bookId);
+        Book resultById = (Book) redisTemplate.opsForHash().get(BOOK_ENTITY + "_Map", bookId);
         logger.info("resultById >>" + resultById);
         return resultById;
     
     }
     @Override
     public List<Book> findByAuthor(String author) {
-        List<Book> books = (List<Book>)(Object) redisTemplate.opsForHash().values(BOOK_ENTITY+"_Map");
+        List<Book> books = (List<Book>)(Object) redisTemplate.opsForHash().values(BOOK_ENTITY + "_Map");
         List<Book> findByAuthor = new ArrayList<Book>();
         for (Book book : books){
 

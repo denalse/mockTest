@@ -2,18 +2,21 @@ package sg.edu.nus.iss.app.mockTest.model;
 
 import java.io.Serializable;
 
+import org.springframework.data.redis.core.RedisHash;
+
+@RedisHash("Book")
 public class Book implements Serializable{
     private String bookId;
     private String imageUrl;
     private String title;
     private String author;
 
-    public Book(String bookId, String imageUrl, String title, String author) {
+    public Book(String bookId, String title, String author, String imageUrl) {
         this.bookId = bookId;
-        this.imageUrl = imageUrl;
         this.title = title;
         this.author = author;
-    }
+        this.imageUrl = imageUrl;
+    }   
 
     public String getBookId() {
         return bookId;
