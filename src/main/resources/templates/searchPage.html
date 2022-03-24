@@ -19,12 +19,9 @@
         </div>
     </div> -->
 
-    <form
-        action="#"
-        th:action="@{/search}"
-        th:object="${book}"
-        method="GET"
-        >    
+    <form action="#" th:action="@{/search}"
+        th:object="${book}" method="GET" >   
+
             <h1>Search for books: </h1>
             <p><input type="text" name="search" id="search"/></p>
             <p>
@@ -37,6 +34,10 @@
                 <input type="submit" name="getAllBooks" value="Browse All Books">
             </p>
 
+        </form>
+      
+            <input type="submit" name="getAllBooks" value="Browse All Books">
+        
         </form>
     
     <!-- <form action="#" th:action="@{/book}" 
